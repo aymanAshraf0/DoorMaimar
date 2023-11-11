@@ -1,11 +1,11 @@
 <style>
   footer .btn{
-    background-color: rgba(212, 169, 50, 0.838);
+    background-color: #AC9366;
     color: #ffccbc;
   }
   footer .btn:hover{
     color: rgba(212, 169, 50, 0.838);
-    background-color:#ffccbc;
+    background-color:rgba(212, 169, 50, 0.838);
   }
 
   .footer{
@@ -31,7 +31,7 @@
   font-family: system-ui;
 }
 .footerr a:hover{
-  color: rgba(212, 169, 50, 0.838) !important;
+  color: #AC9366 !important;
 }
 .footerr a i{
   color: rgba(212, 169, 50, 0.838);
@@ -43,7 +43,7 @@
 }
 .sh{
   font-family: system-ui;
-  color: #f35525;
+  color: #AC9366;
 }
 
 </style>

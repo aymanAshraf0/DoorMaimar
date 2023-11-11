@@ -18,7 +18,12 @@
   <!-- ***** Preloader End ***** -->
 @extends('layout.header')
 
-
+<style>
+  .fa-solid{
+  color: #AC9366;
+  margin-left: 10px;
+}
+</style>
   <div class="main-banner">
     <div class="owl-carousel owl-banner">
       @foreach ($sliderimage as $item)
@@ -48,23 +53,37 @@
         <div class="col-lg-4 col-md-6">
           <div class="item">
             <a href="{{url('/showDetails',$item->id)}}"><img src="{{ asset('uploads/images/realEstateImage/'. $item->images) }}" alt=""></a>
-            <span class="category">{{$item->Real_estate->real_estate_name}}</span>
-            <h6>{{$item->price}}</h6>
             
+            <div class="row mt-2">
+              <div class="col  category">{{$item->Real_estate->real_estate_name}} <i class=" fa-solid fa-house"></i></div>
+              <div class="col">{{$item->address}} <i class=" fa-solid fa-location-dot"></i></div>
+            </div>
             <ul>
               <div class="row mt-2">
-                <div class="col "><li><span>{{$item->address}}</span></li></div>
-                <div class="col"><li>رقم العرض: <span>{{$item->number_of_offer}}</span></li></div>
+                <div class="col "><li><span>{{$item->price}} <i class="fa-solid fa-money-bill"></i></span></li></div>
+                <div class="col"><li> <span>{{$item->number_of_offer}} <i class=" fa-solid fa-key"></i></span></li></div>
               </div>
-              
-              
+
+              <div class="row">
+                <div class="col">
+                  <li><span>{{$item->kindOfStairs}} <i class=" fa-solid fa-stairs"></i></span></li>
+                </div>
+                <div class="col">
+                  <li><span>{{$item->barking}} <i class=" fa-solid fa-parking"></i></span></li>
+                </div>
+              </div>
               <hr>
-              <li>نوع الدرج: <span>{{$item->kindOfStairs}}</span></li>
-              <li>الغرف: <span>{{$item->numberOfRooms}}</span></li>
-              <li>الحمامات: <span>{{$item->bathrooms}}</span></li>
-              <li>الباركينج: <span>{{$item->barking}}</span></li>
-              <hr>
-              <li>المساحه: <span>{{$item->space}}</span></li>
+              <div class="row">
+                <div class="col">
+                  <li><span>{{$item->numberOfRooms}} <i class=" fa-solid fa-bed"></i></span></li>
+                </div>
+                <div class="col">
+                  <li><span>{{$item->bathrooms}} <i class=" fa-solid fa-bath"></i></span></li>
+                </div>
+                <div class="col">
+                  <li><span>{{$item->space}} <i class=" fa-solid fa-text-width"></i></span></li>
+                </div>
+              </div>
             </ul>
             <div class="main-button"> 
               <a href="{{url('/showDetails',$item->id)}}">عرض التفاصيل</a>
