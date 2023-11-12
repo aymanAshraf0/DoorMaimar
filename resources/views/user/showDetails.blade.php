@@ -36,6 +36,14 @@
     </div>
   </div>
 
+  <style>
+    .fa-solid{
+    color: #AC9366;
+    margin-left: 10px;
+  }
+  </style>
+
+
   <div class="container mt-5">
     <div class="row">
         <div class="col-lg-6">
