@@ -31,8 +31,13 @@ use App\Http\Controllers\UserController;
 // });
 
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
 Auth::routes();
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+// في ملف routes/web.php
+Route::get('/login2', function () {
+    return view('auth.login2');
+})->name('login2');
 
 
 

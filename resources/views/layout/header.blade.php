@@ -21,7 +21,7 @@
                                     @auth
                                         <li><a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a></li>
                                     @else
-                                        <li><a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">دخول</a></li>
+                                        <li><a href="{{ route('login2') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">دخول</a></li>
                 
                                         {{-- @if (Route::has('register'))
                                             <li><a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">تهيئه</a></li>

@@ -54,11 +54,31 @@
                             </div>
                         </div>
 
+
                         <div class="row mb-3">
+                            <label for="phoneNumber" class="col-md-4 col-form-label text-md-right">{{ __('رقم الهاتف') }}</label>
+                        
+                            <div class="col-md-6">
+                                <input id="phoneNumber" type="text" class="form-control @error('phoneNumber') is-invalid @enderror" name="phoneNumber" value="{{ old('phoneNumber') }}" required autocomplete="phoneNumber" autofocus>
+                        
+                                @error('phoneNumber')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        
+
+
+
+
+
+                        <div  class="row mb-3">
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('كلمه السر') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="text-light form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                <input id="password" type="password" value="12345678" class="text-light form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -72,7 +92,7 @@
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('تاكيد كلمه السر') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="text-light form-control" name="password_confirmation" required autocomplete="new-password">
+                                <input id="password-confirm" type="password" value="12345678" class="text-light form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
 
