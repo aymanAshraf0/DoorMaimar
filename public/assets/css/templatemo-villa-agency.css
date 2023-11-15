@@ -207,7 +207,7 @@ body {
   width: 100%;
   line-height: 40px;
   padding: 0px 30px;
-  border-radius: 25px;
+/* margin-top: 0% !; */
   transition: all .3s;
 
 }
@@ -471,14 +471,14 @@ Header Style
   border: transparent;
   letter-spacing: .25px;
   font-size: large;
-  font-family: El Messiri;
+  font-family: system-ui;
 }
 
 .header-area .main-nav .nav li:last-child a {
   
   color: #fff;
-  font-size:x-large;
-  font-weight: 400;
+  font-size:large;
+  font-weight: 500;
   text-transform: none;
   border-radius: 20px;
   padding-left: 0px;
@@ -531,6 +531,7 @@ Header Style
 
 .background-header .main-nav ul.nav {
   margin-top: 20px;
+ 
 }
 
 .header-area .main-nav .menu-trigger span,
@@ -786,7 +787,8 @@ Banner Style
 
 .main-banner .item h2 {
   font-size: 62px;
-  font-weight: 700;
+  font-weight: 600;
+  font-family: system-ui;
   text-transform: uppercase;
   color: #fff;
   line-height: 72px;
@@ -963,61 +965,31 @@ Featured Style
   font-weight: 400;
 }
 
-/* 
----------------------------------------------
-Video Style
---------------------------------------------- 
-*/
-
-.video {
-  background-image: url(../images/video-bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  padding: 100px 0px 250px 0px;
-  position: relative;
+.property-details {
+  list-style: none;
+  padding: 0;
 }
 
-.video-content {
-  margin-top: -240px;
+.property-details li {
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 10px;
 }
 
-.video .section-heading h2 {
-  color: #fff;
+.property-details-row {
+  display: flex;
+  align-items: center;
 }
 
-.video-content .video-frame {
-  position: relative;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
-  border-radius: 10px;
+.property-details-row span {
+  margin-right: 5px;
 }
 
-.video-content .video-frame img {
-  border-radius: 10px;
+.property-data {
+  flex: 1;
 }
 
-.video-content .video-frame a {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-26px, -26px);
-  width: 52px;
-  height: 52px;
-  background-color: #fff;
-  border-radius: 50%;
-  display: inline-block;
-  text-align: center;
-  line-height: 52px;
-  color: #AC9366;
-  outline: 15px solid rgba(254, 85, 37, 0.5);
-  font-size: 18px;
-}
 
-/* 
----------------------------------------------
-Fun Facts Style
---------------------------------------------- 
-*/
 
 .fun-facts {
   text-align: center;
@@ -1175,14 +1147,12 @@ Properties Style
 
 .properties .item {
   height: 80%;
-  border-radius: 10px;
-  padding: 30px;
+  padding: 10px;
   margin-bottom: 30px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.621);
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.621);
 }
 
 .properties .item img {
-  border-radius: 5px;
   height: 400px;
 }
 
@@ -1204,11 +1174,19 @@ Properties Style
   color: #1e1e1e;
 }
 
-.properties .item ul li {
+.properties .item ul li .fristt{
   display: inline-block;
   font-size: 15px;
   color: #4a4a4a;
   margin-right: 20px;
+  width: 100%;
+}
+.properties .item ul li .secondd{
+  display: inline-block;
+  font-size: 15px;
+  color: #4a4a4a;
+  margin-right: 20px;
+
 }
 
 .properties .item ul li span {
@@ -1758,6 +1736,7 @@ body {
   .header-area .main-nav .nav li a {
     padding-left: 3px;
     padding-right: 3px;
+    background-color: #AC9366;
   }
   .header-area .main-nav .nav li:last-child a {
     padding-right: 15px;

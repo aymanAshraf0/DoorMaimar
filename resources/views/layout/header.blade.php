@@ -10,7 +10,7 @@
                     </a>
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
-                    <ul class="nav">
+                    <ul class="nav menu">
                         <li><a href="/chatify" class="{{ Request::is('chatify') ? 'active' : '' }}">محادثه</a></li>
                         <li><a href="{{ url('contact') }}" class="{{ Request::is('contact') ? 'active' : '' }}">تواصل معنا</a></li>
                         <li><a href="{{ url('services') }}" class="{{ Request::is('services') ? 'active' : '' }}">خدماتنا</a></li>
@@ -30,14 +30,19 @@
                             @endif
                         </li>
                   </ul>   
-                    <a class='menu-trigger'>
-                        <span>Menu</span>
-                    </a>
-                    <!-- ***** Menu End ***** -->
+                  <a class='menu-trigger' onclick="toggleMenu()">
+                    <span>Menu</span>
+                </a>
+              
                 </nav>
             </div>
         </div>
     </div>
-
+<script>
+    function toggleMenu() {
+    var menu = document.querySelector('.menu');
+    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+}
+</script>
   </header>
     <!-- ***** Header Area End ***** -->

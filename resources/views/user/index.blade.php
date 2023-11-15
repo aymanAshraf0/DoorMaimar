@@ -23,6 +23,7 @@
   color: #AC9366;
   margin-left: 10px;
 }
+
 </style>
   <div class="main-banner">
     <div class="owl-carousel owl-banner">
@@ -50,55 +51,113 @@
       </div>
       <div class="row" data-aos="fade-right" data-aos-duration="2000">
         @foreach ($realEstate2 as $item)
-        <div class="col-lg-4 col-md-6">
-          <div class="item">
-            <a href="{{url('/showDetails',$item->id)}}"><img src="{{ asset('uploads/images/realEstateImage/'. $item->images) }}" alt=""></a>
-            
-            <div class="row mt-2">
-              <div class="col  category">{{$item->Real_estate->real_estate_name}} <i class=" fa-solid fa-house"></i></div>
-              <div class="col">{{$item->address}} <i class=" fa-solid fa-location-dot"></i></div>
-            </div>
-            <ul>
-              <div class="row mt-2">
-                <div class="col "><li><span>{{$item->price}} <i class="fa-solid fa-money-bill"></i></span></li></div>
-                <div class="col"><li> <span>{{$item->number_of_offer}} <i class=" fa-solid fa-key"></i></span></li></div>
+          <div class="col-lg-4 col-md-6">
+            <div class="item">
+              <a href="{{url('/showDetails',$item->id)}}"><img src="{{ asset('uploads/images/realEstateImage/'. $item->images) }}" alt=""></a>
+      
+              <ul class="property-details">
+                <li class="fristt">
+                <div class="row">
+                  <div class="col">
+                  <div class="property-details-row">
+                    <span><i class="fa-solid fa-house"></i></span>
+                    <span class="property-data">{{$item->Real_estate->real_estate_name}}</span>
+                  </div>
+                  </div>
+
+                  <div class="col">
+                  <div class="property-details-row">
+                    <span><i class="fa-solid fa-location-dot"></i></span>
+                    <span class="property-data">{{$item->address}}</span>
+                  </div>
+                  </div>
+                  
+                </div>
+              </li>
+              <li class="secondd">
+                <div class="row">
+                  
+                  <div class="col">
+                    <div class="property-details-row">
+                    <span><i class="fa-solid fa-money-bill"></i></span>
+                    <span class="property-data">{{$item->price}}</span>
+                  </div>
+                </div>
+                
+                <div class="col">
+                  <div class="property-details-row">
+                    <span><i class="fa-solid fa-key"></i></span>
+                    <span class="property-data">{{$item->number_of_offer}}</span>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row">
+                
+                <div class="col">
+                  <div class="property-details-row">
+                    <span><i class="fa-solid fa-stairs"></i></span>
+                    <span class="property-data">{{$item->kindOfStairs}}</span>
+                  </div>
+                </div>
+                
+                <div class="col">
+                  <div class="property-details-row">
+                    <span><i class="fa-solid fa-parking"></i></span>
+                    <span class="property-data">{{$item->barking}}</span>
+                  </div>
+                </div>
+                
               </div>
 
-              <div class="row">
-                <div class="col">
-                  <li><span>{{$item->kindOfStairs}} <i class=" fa-solid fa-stairs"></i></span></li>
+            </li>
+                
+                  <hr>
+                  <div class="row">
+                    
+                    <div class="col">
+                      <div class="property-details-row">
+                        <span><i class="fa-solid fa-bed"></i></span>
+                        <span class="property-data">{{$item->numberOfRooms}}</span>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="property-details-row">
+                        <span><i class="fa-solid fa-bath"></i></span>
+                        <span class="property-data">{{$item->bathrooms}}</span>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="property-details-row">
+                        <span><i class="fa-solid fa-text-width"></i></span>
+                        <span class="property-data">{{$item->space}}</span>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="property-details-row">
+                        <span><i class=" fa-solid fa-elevator"></i></span>
+                        <span class="property-data">{{$item->elevators}}</span>
+                      </div>
+                    </div>
+                    <div class="main-button mt-3"> 
+                      <a href="{{url('/showDetails',$item->id)}}"><i class="fa-solid text-light fs-6 fa-arrow-left"></i>   عرض التفاصيل</a>
+                    </div>
+
                 </div>
-                <div class="col">
-                  <li><span>{{$item->barking}} <i class=" fa-solid fa-parking"></i></span></li>
-                </div>
-              </div>
-              <hr>
-              <div class="row">
-                <div class="col">
-                  <li><span>{{$item->numberOfRooms}} <i class=" fa-solid fa-bed"></i></span></li>
-                </div>
-                <div class="col">
-                  <li><span>{{$item->bathrooms}} <i class=" fa-solid fa-bath"></i></span></li>
-                </div>
-                <div class="col">
-                  <li><span>{{$item->space}} <i class=" fa-solid fa-text-width"></i></span></li>
-                </div>
-              </div>
-            </ul>
-            <div class="main-button"> 
-              <a href="{{url('/showDetails',$item->id)}}">عرض التفاصيل</a>
+              </ul>
             </div>
           </div>
-        </div>
         @endforeach
-        
+      
         <div class="row">
           <div class="col-lg-12">
-              <ul class="pagination">
-                  {{ $realEstate2P->links() }}
-              </ul>
+            <ul class="pagination">
+              {{ $realEstate2P->links() }}
+            </ul>
           </div>
+        </div>
       </div>
+      
         
       </div>
     </div>
